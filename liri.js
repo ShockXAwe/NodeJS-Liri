@@ -1,6 +1,7 @@
 require("dotenv").config();
 var Spotify = require('node-spotify-api');
 var axios = require("axios");
+var bandsintown = require('bandsintown')("codingbootcamp");
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 var action = process.argv[2];
@@ -14,6 +15,8 @@ if (action === "spotify-this-song"){
       
       console.log(data); 
       });
-} if (action === "concert-this"{
-    
-})
+} if (action === "concert-this"){
+    bandsintown.getArtistEventList(process.argv[3]).then(function(events) {
+      console.log(events);
+    });
+}
