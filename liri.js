@@ -3,9 +3,9 @@ var keys = require("./keys.js");
 var action = process.argv[2];
 var request = process.argv[3];
 
-if (action == "spotify-this-song" && request == ""){
+if (action == "spotify-this-song" && request == undefined){
   spotifyCall("The Sign")
-} else if (action === "spotify-this-song"){
+} else if (action == "spotify-this-song"){
   spotifyCall(request);
 }
 
