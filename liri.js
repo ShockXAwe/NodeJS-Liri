@@ -20,7 +20,7 @@ if (action == "concert-this" && request == "") {
 }
 
 if (action == "movie-this" && request == ""){
-  omdb.omdbcall("Mr.Nobody");
+  omdb.omdbCall("Mr.Nobody");
 } else if (action == "movie-this"){
   omdb.omdbCall(request);
 }
