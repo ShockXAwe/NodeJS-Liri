@@ -7,8 +7,8 @@ var request = process.argv.slice(3).join(" ");
 
 
 if (action == "spotify-this-song" && request == ""){
-  console.log("fireeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" + request);
-  spotify.spotifyCall("The Sign")
+  console.log(request);
+  spotify.spotifyCall("The Sign Ace of Base")
 } else if (action == "spotify-this-song"){
   spotify.spotifyCall(request);
 }
